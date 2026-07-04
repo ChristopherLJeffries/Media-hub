@@ -2,73 +2,250 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Black Creators Media Hub</title>
+  <title>Black Creators Live Hub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: system-ui, sans-serif;
-      background: #111;
+      background: #050505;
       color: #f5f5f5;
     }
+
     header {
       padding: 20px;
       text-align: center;
       background: #000;
       border-bottom: 1px solid #333;
     }
-    .section {
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .hero {
       max-width: 900px;
       margin: 20px auto;
-      padding: 10px 20px;
+      padding: 20px;
+      text-align: center;
     }
-    h2 {
-      border-bottom: 1px solid #333;
-      padding-bottom: 5px;
+
+    .hero h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
     }
-    .embed {
-      margin: 15px 0;
+
+    .hero p {
+      font-size: 15px;
+      color: #ccc;
     }
-    iframe {
-      width: 100%;
-      max-width: 600px;
-      height: 340px;
-      border: none;
+
+    .grid {
+      max-width: 1000px;
+      margin: 10px auto 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #111;
+      border-radius: 14px;
+      padding: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    }
+
+    .card h3 {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+
+    .card p {
+      margin: 4px 0;
+      font-size: 13px;
+      color: #bbb;
+    }
+
+    .live-tag {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #e53935;
+      font-size: 11px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .platforms {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .stills {
+      max-width: 1000px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+    }
+
+    .stills h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .stills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .still {
+      flex: 1 1 180px;
+      height: 120px;
+      background: linear-gradient(135deg, #333, #555);
       border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .still span {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      font-size: 12px;
+      color: #eee;
+    }
+
+    .still::after {
+      content: "▶ reel";
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #2196f3;
+      color: #fff;
+    }
+
+    .cta {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      padding: 20px;
+      text-align: center;
+      background: #111;
+      border-radius: 14px;
+    }
+
+    .cta h2 {
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .cta button {
+      margin-top: 12px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: none;
+      background: #ff9800;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .cta button:hover {
+      background: #ffc107;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #777;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Black Creators Media Hub</h1>
-  <p>Reels from TikTok, Instagram, and YouTube</p>
+  <h1>Black Creators Live Hub</h1>
+  <p>Multi-platform live streaming concept — TikTok · Instagram · YouTube · Twitch · Kick</p>
 </header>
 
-<div class="section">
-  <h2>TikTok Reels</h2>
-  <div class="embed">
-    <!-- Replace this URL with a TikTok embed link from a creator -->
-    <iframe src="https://www.tiktok.com/embed/1234567890"></iframe>
+<div class="hero">
+  <h2>One Live Stream. Many Platforms.</h2>
+  <p>
+    This is a concept landing page for a future live streaming platform that would let creators
+    broadcast from one app to multiple destinations, edit live streams on demand, and publish
+    reels within minutes — with an algorithm that highlights Black and African American creators
+    while staying open to all.
+  </p>
+</div>
+
+<div class="grid">
+  <div class="card">
+    <div class="live-tag">LIVE</div>
+    <h3>@creator_one</h3>
+    <p>Streaming to TikTok + Instagram Live + YouTube at once.</p>
+    <p class="platforms">Concept: multi-stream from this hub to all meta platforms.</p>
+  </div>
+
+  <div class="card">
+    <div class="live-tag">LIVE</div>
+    <h3>@creator_two</h3>
+    <p>Gaming stream mirrored to Twitch + Kick.</p>
+    <p class="platforms">Concept: broadcast from this app, out to Twitch/Kick.</p>
+  </div>
+
+  <div class="card">
+    <h3>Instant Edits</h3>
+    <p>Idea: cut highlights from live streams and post reels within minutes.</p>
+    <p class="platforms">Future feature: on-demand editing + auto reel generation.</p>
+  </div>
+
+  <div class="card">
+    <h3>Algorithm Vision</h3>
+    <p>Prioritize visibility for Black / African American creators while welcoming all creators.</p>
+    <p class="platforms">Concept: fair, intentional discovery engine.</p>
   </div>
 </div>
 
-<div class="section">
-  <h2>Instagram Reels</h2>
-  <div class="embed">
-    <!-- Replace with Instagram embed URL -->
-    <iframe src="https://www.instagram.com/reel/EXAMPLE/embed"></iframe>
+<div class="stills">
+  <h2>Stills That Become Reels (Concept)</h2>
+  <div class="stills-row">
+    <div class="still"><span>@creator_photo_1</span></div>
+    <div class="still"><span>@creator_photo_2</span></div>
+    <div class="still"><span>@creator_photo_3</span></div>
+    <div class="still"><span>@creator_photo_4</span></div>
   </div>
 </div>
 
-<div class="section">
-  <h2>YouTube Shorts</h2>
-  <div class="embed">
-    <!-- Replace with YouTube video or Shorts URL -->
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
-  </div>
+<div class="cta">
+  <h2>For Creators & Collaborators</h2>
+  <p>
+    This page is a vision: a media outlet driven by social content, built to uplift Black and African American
+    creators while staying open to everyone. The full app would require platform APIs, permissions, and
+    backend engineering — this site is the first step in telling that story.
+  </p>
+  <button>Join the Vision (Coming Soon)</button>
 </div>
+
+<footer>
+  Concept demo built on GitHub Pages — not yet a functional multi-stream app.
+</footer>
 
 </body>
 </html>
+
